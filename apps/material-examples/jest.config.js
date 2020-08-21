@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'angular-pocs',
+  name: 'material-examples',
   preset: '../../jest.config.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -12,7 +12,7 @@ module.exports = {
       ],
     },
   },
-  coverageDirectory: '../../coverage/apps/angular-pocs',
+  coverageDirectory: '../../coverage/apps/material-examples',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

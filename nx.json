@@ -28,6 +28,13 @@
     "angular-pocs-e2e": {
       "tags": [],
       "implicitDependencies": ["angular-pocs"]
+    },
+    "material-examples": {
+      "tags": []
+    },
+    "material-examples-e2e": {
+      "tags": [],
+      "implicitDependencies": ["material-examples"]
     }
   }
 }

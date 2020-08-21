@@ -123,6 +123,132 @@
           }
         }
       }
+    },
+    "material-examples": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/material-examples",
+      "sourceRoot": "apps/material-examples/src",
+      "prefix": "angular-pocs",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/material-examples",
+            "index": "apps/material-examples/src/index.html",
+            "main": "apps/material-examples/src/main.ts",
+            "polyfills": "apps/material-examples/src/polyfills.ts",
+            "tsConfig": "apps/material-examples/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/material-examples/src/favicon.ico",
+              "apps/material-examples/src/assets"
+            ],
+            "styles": ["apps/material-examples/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/material-examples/src/environments/environment.ts",
+                  "with": "apps/material-examples/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "material-examples:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "material-examples:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "material-examples:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/material-examples/tsconfig.app.json",
+              "apps/material-examples/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/material-examples/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/material-examples/jest.config.js",
+            "tsConfig": "apps/material-examples/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/material-examples/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "material-examples-e2e": {
+      "root": "apps/material-examples-e2e",
+      "sourceRoot": "apps/material-examples-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/material-examples-e2e/cypress.json",
+            "tsConfig": "apps/material-examples-e2e/tsconfig.e2e.json",
+            "devServerTarget": "material-examples:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "material-examples:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/material-examples-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/material-examples-e2e/**/*"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
