@@ -14,6 +14,13 @@ This project was generated using [Nx](https://nx.dev).
 
 [Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
 
+## Project list
+
+| ALIAS               | NOME                        |
+| ------------------- | --------------------------- |
+| `calculadora`      | Calculadora              |
+| `material-examples`      | Exemplos de uso do Angular Material Design          |
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
@@ -24,16 +31,7 @@ Below are our core plugins:
 
 - [Angular](https://angular.io)
   - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+
 
 There are also many [community plugins](https://nx.dev/nx-community) you could add.
 

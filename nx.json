@@ -35,6 +35,13 @@
     "material-examples-e2e": {
       "tags": [],
       "implicitDependencies": ["material-examples"]
+    },
+    "calculadora": {
+      "tags": []
+    },
+    "calculadora-e2e": {
+      "tags": [],
+      "implicitDependencies": ["calculadora"]
     }
   }
 }

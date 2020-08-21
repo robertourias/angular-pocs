@@ -249,6 +249,125 @@
           }
         }
       }
+    },
+    "calculadora": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/calculadora",
+      "sourceRoot": "apps/calculadora/src",
+      "prefix": "angular-pocs",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/calculadora",
+            "index": "apps/calculadora/src/index.html",
+            "main": "apps/calculadora/src/main.ts",
+            "polyfills": "apps/calculadora/src/polyfills.ts",
+            "tsConfig": "apps/calculadora/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/calculadora/src/favicon.ico",
+              "apps/calculadora/src/assets"
+            ],
+            "styles": ["apps/calculadora/src/styles.css", "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/calculadora/src/environments/environment.ts",
+                  "with": "apps/calculadora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "calculadora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "calculadora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "calculadora:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/calculadora/tsconfig.app.json",
+              "apps/calculadora/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/calculadora/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/calculadora/jest.config.js",
+            "tsConfig": "apps/calculadora/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/calculadora/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "calculadora-e2e": {
+      "root": "apps/calculadora-e2e",
+      "sourceRoot": "apps/calculadora-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/calculadora-e2e/cypress.json",
+            "tsConfig": "apps/calculadora-e2e/tsconfig.e2e.json",
+            "devServerTarget": "calculadora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "calculadora:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/calculadora-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/calculadora-e2e/**/*"]
+          }
+        }
+      }
     }
   },
   "cli": {
