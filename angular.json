@@ -387,6 +387,7 @@
             "main": "apps/angular-ngrx-example/src/main.ts",
             "polyfills": "apps/angular-ngrx-example/src/polyfills.ts",
             "tsConfig": "apps/angular-ngrx-example/tsconfig.app.json",
+            "proxyConfig": "apps/angular-ngrx-example/proxy.conf.json",
             "aot": true,
             "assets": [
               "apps/angular-ngrx-example/src/favicon.ico",
