@@ -42,6 +42,13 @@
     "calculadora-e2e": {
       "tags": [],
       "implicitDependencies": ["calculadora"]
+    },
+    "angular-ngrx-example": {
+      "tags": []
+    },
+    "angular-ngrx-example-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-ngrx-example"]
     }
   }
 }
