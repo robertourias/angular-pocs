@@ -49,6 +49,13 @@
     "angular-ngrx-example-e2e": {
       "tags": [],
       "implicitDependencies": ["angular-ngrx-example"]
+    },
+    "meat-aplication": {
+      "tags": []
+    },
+    "meat-aplication-e2e": {
+      "tags": [],
+      "implicitDependencies": ["meat-aplication"]
     }
   }
 }
