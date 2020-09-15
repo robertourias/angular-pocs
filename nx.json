@@ -50,12 +50,12 @@
       "tags": [],
       "implicitDependencies": ["angular-ngrx-example"]
     },
-    "meat-aplication": {
+    "meat-application": {
       "tags": []
     },
-    "meat-aplication-e2e": {
+    "meat-application-e2e": {
       "tags": [],
-      "implicitDependencies": ["meat-aplication"]
+      "implicitDependencies": ["meat-application"]
     }
   }
 }

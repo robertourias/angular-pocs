@@ -498,35 +498,35 @@
         }
       }
     },
-    "meat-aplication": {
+    "meat-application": {
       "projectType": "application",
       "schematics": {},
-      "root": "apps/meat-aplication",
-      "sourceRoot": "apps/meat-aplication/src",
+      "root": "apps/meat-application",
+      "sourceRoot": "apps/meat-application/src",
       "prefix": "angular-pocs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/meat-aplication",
-            "index": "apps/meat-aplication/src/index.html",
-            "main": "apps/meat-aplication/src/main.ts",
-            "polyfills": "apps/meat-aplication/src/polyfills.ts",
-            "tsConfig": "apps/meat-aplication/tsconfig.app.json",
+            "outputPath": "dist/apps/meat-application",
+            "index": "apps/meat-application/src/index.html",
+            "main": "apps/meat-application/src/main.ts",
+            "polyfills": "apps/meat-application/src/polyfills.ts",
+            "tsConfig": "apps/meat-application/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/meat-aplication/src/favicon.ico",
-              "apps/meat-aplication/src/assets"
+              "apps/meat-application/src/favicon.ico",
+              "apps/meat-application/src/assets"
             ],
-            "styles": ["apps/meat-aplication/src/styles.css"],
+            "styles": ["apps/meat-application/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/meat-aplication/src/environments/environment.ts",
-                  "with": "apps/meat-aplication/src/environments/environment.prod.ts"
+                  "replace": "apps/meat-application/src/environments/environment.ts",
+                  "with": "apps/meat-application/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -555,64 +555,64 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "meat-aplication:build"
+            "browserTarget": "meat-application:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "meat-aplication:build:production"
+              "browserTarget": "meat-application:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "meat-aplication:build"
+            "browserTarget": "meat-application:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/meat-aplication/tsconfig.app.json",
-              "apps/meat-aplication/tsconfig.spec.json"
+              "apps/meat-application/tsconfig.app.json",
+              "apps/meat-application/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/meat-aplication/**/*"]
+            "exclude": ["**/node_modules/**", "!apps/meat-application/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/meat-aplication/jest.config.js",
-            "tsConfig": "apps/meat-aplication/tsconfig.spec.json",
+            "jestConfig": "apps/meat-application/jest.config.js",
+            "tsConfig": "apps/meat-application/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "apps/meat-aplication/src/test-setup.ts"
+            "setupFile": "apps/meat-application/src/test-setup.ts"
           }
         }
       }
     },
-    "meat-aplication-e2e": {
-      "root": "apps/meat-aplication-e2e",
-      "sourceRoot": "apps/meat-aplication-e2e/src",
+    "meat-application-e2e": {
+      "root": "apps/meat-application-e2e",
+      "sourceRoot": "apps/meat-application-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/meat-aplication-e2e/cypress.json",
-            "tsConfig": "apps/meat-aplication-e2e/tsconfig.e2e.json",
-            "devServerTarget": "meat-aplication:serve"
+            "cypressConfig": "apps/meat-application-e2e/cypress.json",
+            "tsConfig": "apps/meat-application-e2e/tsconfig.e2e.json",
+            "devServerTarget": "meat-application:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "meat-aplication:serve:production"
+              "devServerTarget": "meat-application:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/meat-aplication-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/meat-aplication-e2e/**/*"]
+            "tsConfig": ["apps/meat-application-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/meat-application-e2e/**/*"]
           }
         }
       }
