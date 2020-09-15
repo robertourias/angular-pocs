@@ -20,6 +20,7 @@ This project was generated using [Nx](https://nx.dev).
 | ------------------- | --------------------------- |
 | `calculadora`      | Calculadora              |
 | `material-examples`      | Exemplos de uso do Angular Material Design          |
+| `meat-application`      | Aplicação de um Restaurante          |
 
 ## Adding capabilities to your workspace
 
