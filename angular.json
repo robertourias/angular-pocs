@@ -627,6 +627,125 @@
           }
         }
       }
+    },
+    "ngrx-poc": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/ngrx-poc",
+      "sourceRoot": "apps/ngrx-poc/src",
+      "prefix": "angular-pocs",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngrx-poc",
+            "index": "apps/ngrx-poc/src/index.html",
+            "main": "apps/ngrx-poc/src/main.ts",
+            "polyfills": "apps/ngrx-poc/src/polyfills.ts",
+            "tsConfig": "apps/ngrx-poc/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/ngrx-poc/src/favicon.ico",
+              "apps/ngrx-poc/src/assets"
+            ],
+            "styles": ["apps/ngrx-poc/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ngrx-poc/src/environments/environment.ts",
+                  "with": "apps/ngrx-poc/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngrx-poc:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngrx-poc:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngrx-poc:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngrx-poc/tsconfig.app.json",
+              "apps/ngrx-poc/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/ngrx-poc/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ngrx-poc/jest.config.js",
+            "tsConfig": "apps/ngrx-poc/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/ngrx-poc/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngrx-poc-e2e": {
+      "root": "apps/ngrx-poc-e2e",
+      "sourceRoot": "apps/ngrx-poc-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngrx-poc-e2e/cypress.json",
+            "tsConfig": "apps/ngrx-poc-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngrx-poc:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngrx-poc:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/ngrx-poc-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ngrx-poc-e2e/**/*"]
+          }
+        }
+      }
     }
   },
   "cli": {

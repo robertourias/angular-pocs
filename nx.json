@@ -56,6 +56,13 @@
     "meat-application-e2e": {
       "tags": [],
       "implicitDependencies": ["meat-application"]
+    },
+    "ngrx-poc": {
+      "tags": []
+    },
+    "ngrx-poc-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngrx-poc"]
     }
   }
 }
