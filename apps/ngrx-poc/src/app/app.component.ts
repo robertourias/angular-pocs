@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import { CartModel } from './models/cart.model';
 
 @Component({
-  selector: 'angular-pocs-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-root',
+  templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  title = 'ngrx-poc';
+  cart$: Observable<CartModel>;
+
+  constructor(private store: Store<CartModel>) {
+    this.cart$ = store.pipe(select('cart'));
+  }
 }

@@ -24,8 +24,12 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     NavbarComponent,
     ShoppingCartComponent,
   ],
+  entryComponents: [],
   imports: [
     BrowserModule,
+    IonicModule.forRoot(),
+    HttpClientModule,
+    AppRoutingModule,
     StoreModule.forRoot(
       {
         cart: cartReducer
@@ -40,9 +44,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    IonicModule.forRoot(),
-    HttpClientModule,
-    AppRoutingModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [
     {
