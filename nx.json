@@ -63,6 +63,13 @@
     "ngrx-poc-e2e": {
       "tags": [],
       "implicitDependencies": ["ngrx-poc"]
+    },
+    "akita-poc": {
+      "tags": []
+    },
+    "akita-poc-e2e": {
+      "tags": [],
+      "implicitDependencies": ["akita-poc"]
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "data": {
+    "products": [
+      {
+        "_id": "1",
+        "title": "Notebook Samsung",
+        "category": "Informática",
+        "description": "Notebook Samsung, Intel Celeron N4000, 4GB, 128GB, Tela 13,3', Branco Giz, Flash...",
+        "price": "2462,91",
+        "images": ["https://www.fastshop.com.br//wcsstore/FastShopCAS/imagens/_IN_Informatica/SGNP530XBBAD2/SGNP530XBBAD2_PRD_160_1.jpg"]
+      },
+      {
+        "_id": "2",
+        "title": "Notebook Asus VivoBook 15",
+        "category": "Informática",
+        "description": "Notebook Asus VivoBook 15, Intel® Core™ i5 6200U, 8 GB, 1 TB, Tela de 15,6', Cin...",
+        "price": "3315,79",
+        "images": ["https://www.fastshop.com.br//wcsstore/FastShopCAS/imagens/_IN_Informatica/UXX543UA3154T/UXX543UA3154T_PRD_160_1.jpg"]
+      },
+      {
+        "_id": "3",
+        "title": "Câmera Digital GoPro Hero 7 Black",
+        "category": "Cameras e Filamdoras",
+        "description": "Câmera Digital GoPro Hero 7 Black com 12 MP, Gravação em 4K + Carregador Duplo d...",
+        "price": "2439,20",
+        "images": ["https://www.fastshop.com.br//wcsstore/FastShopCAS/imagens/_DG_Digitais/HGHERO7KIT/HGHERO7KIT_PRD_160_1.jpg"]
+      },
+      {
+        "_id": "4",
+        "title": "Tripé com Suporte  GoPro",
+        "category": "Tripés",
+        "description": "Tripé com Suporte  GoPro para Câmeras Hero Preto - ABQRT-002 ",
+        "price": "79,22",
+        "images": ["https://www.fastshop.com.br//wcsstore/FastShopCAS/imagens/_DG_Digitais/HGTRIPESGPTO/V2/HGTRIPESGPTO_PRD_160_1.jpg"]
+      }
+    ]
+  }
+}

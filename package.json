@@ -41,6 +41,8 @@
     "@ngrx/effects": "^10.0.0",
     "@ngrx/entity": "^10.0.0",
     "@ngrx/router-store": "9.1.0",
+    "@datorama/akita": "^5.2.4",
+    "@datorama/akita-ngdevtools": "^5.0.3",
     "@ngrx/schematics": "^10.0.0",
     "@ngrx/store": "^10.0.0",
     "@ngrx/store-devtools": "^10.0.0",
@@ -50,6 +52,7 @@
     "font-awesome": "4.7.0",
     "intl": "1.2.5",
     "jquery": "3.1.1",
+    "json-server": "^0.16.2",
     "rxjs": "~6.5.5",
     "zone.js": "^0.10.2"
   },

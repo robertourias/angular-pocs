@@ -26,6 +26,7 @@ export class ProductListComponent implements OnInit {
     this.service
       .getProducts()
       .subscribe((data) => {
+        console.log("data", data)
         this.products = data;
       });
   }
@@ -35,8 +36,8 @@ export class ProductListComponent implements OnInit {
     const toast = await this.toastCtrl.create({
       message: `${product.title} adicionado ao carrinho`,
       duration: 2000,
-      showCloseButton: true,
-      closeButtonText: "OK"
+      // showCloseButton: true,
+      // closeButtonText: "OK"
     });
     toast.present();
   }

@@ -6,7 +6,7 @@ import { ProductModel } from './models/product.model';
   providedIn: 'root'
 })
 export class DataService {
-  public url = 'http://localhost:7189/v1';
+  public url = 'http://localhost:3000/data';
 
   constructor(
     private http: HttpClient
