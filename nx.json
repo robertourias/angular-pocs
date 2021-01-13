@@ -40,6 +40,9 @@
     },
     "akita-poc": {
       "tags": []
+    },
+    "ngrx": {
+      "tags": []
     }
   }
 }
