@@ -32,44 +32,14 @@
     "material-examples": {
       "tags": []
     },
-    "material-examples-e2e": {
-      "tags": [],
-      "implicitDependencies": ["material-examples"]
-    },
     "calculadora": {
       "tags": []
-    },
-    "calculadora-e2e": {
-      "tags": [],
-      "implicitDependencies": ["calculadora"]
-    },
-    "angular-ngrx-example": {
-      "tags": []
-    },
-    "angular-ngrx-example-e2e": {
-      "tags": [],
-      "implicitDependencies": ["angular-ngrx-example"]
     },
     "meat-application": {
       "tags": []
     },
-    "meat-application-e2e": {
-      "tags": [],
-      "implicitDependencies": ["meat-application"]
-    },
-    "ngrx-poc": {
-      "tags": []
-    },
-    "ngrx-poc-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ngrx-poc"]
-    },
     "akita-poc": {
       "tags": []
-    },
-    "akita-poc-e2e": {
-      "tags": [],
-      "implicitDependencies": ["akita-poc"]
     }
   }
 }
